@@ -1,0 +1,43 @@
+<?php
+
+/**
+ * @file
+ * Holds hooks for the JQuery Colorpicker module.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_theme().
+ */
+function jquery_colorpicker_theme($existing, $type, $theme, $path) {
+
+  return [
+    'jquery_colorpicker' => [
+      'render element' => 'element',
+      'template' => 'jquery-colorpicker',
+      'file' => 'includes/jquery_colorpicker.theme.inc',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function jquery_colorpicker_form_colorapi_color_add_form_alter(array &$form, FormStateInterface $form_state) {
+  jquery_colorpicker_form_alter_common($form, $form_state);
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function jquery_colorpicker_form_colorapi_color_edit_form_alter(array &$form, FormStateInterface $form_state) {
+  jquery_colorpicker_form_alter_common($form, $form_state);
+}
+
+/**
+ * Helper function, swaps out color field render items with jquery widgets.
+ */
+function jquery_colorpicker_form_alter_common(array &$form, FormStateInterface $form_state) {
+  $form['color']['#type'] = 'jquery_colorpicker';
+}

@@ -1,0 +1,14 @@
+name: "Jquery Colorpicker"
+description: "Creates a jQuery colorpicker field and form element"
+core_version_requirement: ^9.3 || ^10
+type: "module"
+package: "Field"
+
+dependencies:
+  - vendor_stream_wrapper:vendor_stream_wrapper
+  - colorapi:colorapi
+
+# Information added by Drupal.org packaging script on 2022-07-20
+version: '3.0.0'
+project: 'jquery_colorpicker'
+datestamp: 1658324554

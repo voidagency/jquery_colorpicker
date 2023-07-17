@@ -1,0 +1,18 @@
+{
+  "name": "b-khouy/jquery_colorpicker",
+  "description": "A Drupal integration with the jQuery Colorpicker (https://www.eyecon.ro/colorpicker) module",
+  "type": "drupal-module",
+  "homepage": "https://drupal.org/project/jquery_colorpicker",
+  "support": {
+    "issues": "https://drupal.org/project/issues/jquery_colorpicker",
+    "source": "https://git.drupalcode.org/project/jquery_colorpicker"
+  },
+  "license": "GPL-2.0-or-later",
+  "minimum-stability": "dev",
+  "require": {
+    "drupal/core": "^9.3 || ^10",
+    "jaypan/jquery-colorpicker": "~1.0.1",
+    "drupal/vendor_stream_wrapper": "^2.0.2",
+    "drupal/colorapi": "^1.1"
+  }
+}

@@ -1,0 +1,38 @@
+<?php
+
+/**
+ * @file
+ * Holds install hooks for the jQuery Colorpicker module.
+ */
+
+use Drupal\field\Entity\FieldConfig;
+use Drupal\field\Entity\FieldStorageConfig;
+use Drupal\colorapi\Plugin\Field\FieldType\ColorItem;
+use Drupal\jquery_colorpicker\Plugin\Field\FieldType\JqueryColorpickerColorItem;
+
+/**
+ * Implements hook_requirements().
+ */
+function jquery_colorpicker_requirements($phase) {
+
+  $requirements = [];
+  if ($phase == 'runtime') {
+    if (file_exists(DRUPAL_ROOT . '/libraries/jquery_colorpicker/js/colorpicker.js')) {
+      $requirements['jquery_colorpicker'] = [
+        'title' => t('Jquery Colorpicker'),
+        'description' => t('The Jquery Colorpicker module no longer requires the jQuery Colorpicker Library located at %path. This library should now be removed as it could be a security risk.', ['%path' => DRUPAL_ROOT . '/libraries/jquery_colorpicker']),
+        'severity' => REQUIREMENT_WARNING,
+      ];
+    }
+  }
+
+  return $requirements;
+}
+
+/**
+ * Minimum 2.x schema version to allow upgrading from.
+ */
+function jquery_colorpicker_update_last_removed() {
+  return 8200;
+}
+
