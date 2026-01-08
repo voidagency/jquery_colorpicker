@@ -1,6 +1,6 @@
 name: "Jquery Colorpicker"
 description: "Creates a jQuery colorpicker field and form element"
-core_version_requirement: ^9.3 || ^10
+core_version_requirement: ^9.3 || ^10 || ^11
 type: "module"
 package: "Field"
 

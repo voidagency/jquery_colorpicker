@@ -10,7 +10,7 @@
   "license": "GPL-2.0-or-later",
   "minimum-stability": "dev",
   "require": {
-    "drupal/core": "^9.3 || ^10",
+    "drupal/core": "^9.3 || ^10 || ^11",
     "jaypan/jquery-colorpicker": "~1.0.1",
     "drupal/vendor_stream_wrapper": "^2.0.2",
     "drupal/colorapi": "^2.1"
