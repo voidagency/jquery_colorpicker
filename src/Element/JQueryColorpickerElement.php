@@ -112,11 +112,11 @@ class JQueryColorpickerElement extends FormElement {
 
     // Since we know the background, we can then get the URL of it to pass to
     // the javascript function.
-    $background_url = \Drupal::service('file_url_generator')->generateAbsoluteString('vendor://jaypan/jquery-colorpicker/images/' . $background);
+    $jquerycolorpicker_css_fix_path = '/' . \Drupal::service('extension.path.resolver')->getPath('module', 'vactory_jquerycolorpicker_css_fix');
 
     // Next we determine what the default value for the form element is. This
     // will also be passed to the javascript function.
-    $element['#attached']['drupalSettings']['jqueryColorpicker']['elements'][$element['#id']]['background'] = $background_url;
+    $element['#attached']['drupalSettings']['jqueryColorpicker']['elements'][$element['#id']]['background'] = $jquerycolorpicker_css_fix_path . '/images/colorpicker/select.png';
 
     return $element;
   }

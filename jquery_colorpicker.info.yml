@@ -5,7 +5,6 @@ type: "module"
 package: "Field"
 
 dependencies:
-  - vendor_stream_wrapper:vendor_stream_wrapper
   - colorapi:colorapi
 
 # Information added by Drupal.org packaging script on 2022-07-20
