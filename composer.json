@@ -13,6 +13,6 @@
     "drupal/core": "^9.3 || ^10",
     "jaypan/jquery-colorpicker": "~1.0.1",
     "drupal/vendor_stream_wrapper": "^2.0.2",
-    "drupal/colorapi": "^1.1"
+    "drupal/colorapi": "^2.1"
   }
 }

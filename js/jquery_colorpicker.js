@@ -130,7 +130,7 @@
     var elements = once("jquery-colorpicker-clear-watcher", ".jquery_field_clear_link", context);
     elements.forEach(function (index) {
       $(index).click(function () {
-        $(index).parents(".jquery_colorpicker:first").find(".color_picker:first").css("background-color", "#FFFFFF").find("input:first").val("");
+        $(index).parents(".jquery_colorpicker:first").find(".color_picker:first").css("background-color", "#FF0000").find("input:first").val("");
 
         return false;
       });
