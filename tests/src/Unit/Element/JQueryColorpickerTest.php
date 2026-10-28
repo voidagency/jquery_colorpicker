@@ -1,7 +1,9 @@
 <?php
 
-namespace Drupal\Test\jquery_colorpicker\Element;
+namespace Drupal\Tests\jquery_colorpicker\Unit\Element;
 
+use Drupal\colorapi\Service\ColorapiService;
+use Drupal\Core\DependencyInjection\ContainerBuilder;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Tests\UnitTestCase;
 use Drupal\jquery_colorpicker\Element\JQueryColorpickerElement;
@@ -11,6 +13,17 @@ use Drupal\jquery_colorpicker\Element\JQueryColorpickerElement;
  * @group jquery_colorpicker
  */
 class JQueryColorpickerTest extends UnitTestCase {
+
+  /**
+   * {@inheritdoc}
+   */
+  protected function setUp(): void {
+    parent::setUp();
+
+    $container = new ContainerBuilder();
+    $container->set('colorapi.service', new ColorapiService());
+    \Drupal::setContainer($container);
+  }
 
   /**
    * @covers ::valueCallback
@@ -26,7 +39,7 @@ class JQueryColorpickerTest extends UnitTestCase {
   /**
    * Data provider for testValueCallback()
    */
-  public function providerTestValueCallback() {
+  public static function providerTestValueCallback() {
     $data = [];
 
     $data[] = [NULL, FALSE];
