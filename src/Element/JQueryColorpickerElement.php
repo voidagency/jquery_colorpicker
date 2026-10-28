@@ -4,15 +4,15 @@ namespace Drupal\jquery_colorpicker\Element;
 
 use Drupal\Component\Utility\Html;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Render\Attribute\FormElement;
 use Drupal\Core\Render\Element;
-use Drupal\Core\Render\Element\FormElement;
+use Drupal\Core\Render\Element\FormElementBase;
 
 /**
  * Provides a jQuery colorpicker form element.
- *
- * @FormElement("jquery_colorpicker")
  */
-class JQueryColorpickerElement extends FormElement {
+#[FormElement('jquery_colorpicker')]
+class JQueryColorpickerElement extends FormElementBase {
 
   /**
    * {@inheritdoc}
